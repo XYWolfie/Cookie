@@ -1,0 +1,26 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: 
+url('background/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10%;
+    column-gap: 13.6%;
+    margin-top: 35%;
+}
+.moneydiv {
+    position: fixed;
+    left: 670px;
+    top: 290px;
+   
+  }

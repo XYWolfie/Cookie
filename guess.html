@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess</title>
+</head>
+<body>
+    <!--Guess the number game-->
+
+
+    <h1>Guess the number 0 - 10000000</h1>
+    
+    <input id="gjette_felt" type="number">
+    <button id="gjette_knapp">Guess</button>
+    <p id="tilbakemelding"></p>
+    <button id="igjen">Play again</button>
+    
+    <h1 id="antall_gjett"></h1>
+    <h2 id="tilbakemelding_forsøk"></h2>
+    <h2 id="timer">Time: 120 sec</h2>
+    <h2 id="rett">Correct guesses: 0</h2>
+    <h2 id="game_over"></h2>
+
+    <script>
+       
+
+        var gjette_felt = document.querySelector('#gjette_felt')
+        var knapp = document.querySelector('#gjette_knapp')
+        var tilbakemelding = document.querySelector('#tilbakemelding')
+        var igjen = document.querySelector('#igjen')
+        var antall_gjett = document.querySelector('#antall_gjett')
+        var timer = document.querySelector('#timer')
+        var tilbakemelding_forsøk = document.querySelector('#tilbakemelding_forsøk')
+        var riktig = false
+        var nummer_rett = 0
+        var rett = document.querySelector('#rett')
+        var game_over = document.querySelector('#game_over')
+        igjen.style.display = 'none'
+
+        antall_gjett = 1
+
+        function gjett(){ // funksjon som kjører når vi trykker på knapp
+            // hente tallet vi skrev inn. Leser verdi fra gjette_felt
+            if (riktig == true){
+
+            }else if (riktig == false){
+                console.log(gjette_felt.value) 
+
+            if (gjette_felt.value > tilfeldig_tall){
+            tilbakemelding.innerHTML = 'too high'
+            tilbakemelding_forsøk.innerHTML = 'number of guesses: ' + antall_gjett
+            antall_gjett += 1
+            teller -= 10
+
+            }else if (gjette_felt.value < tilfeldig_tall){
+            tilbakemelding.innerHTML = 'too low'
+            tilbakemelding_forsøk.innerHTML = 'number of guesses: ' + antall_gjett
+
+            antall_gjett += 1
+            teller -= 10
+
+            }else if (gjette_felt.value == tilfeldig_tall){
+            tilbakemelding.innerHTML = 'correct'
+            tilbakemelding_forsøk.innerHTML = 'number of guesses: ' + antall_gjett
+            antall_gjett += 1
+            riktig = true
+            nummer_rett += 1
+            igjen_f()
+            
+            }
+            
+            
+            
+            
+        
+            }
+
+
+        }
+        function igjen_f(){
+            tilfeldig_tall = Math.floor(Math.random() * 10000000)
+            tilbakemelding.innerHTML = ''
+            console.log(tilfeldig_tall)
+            teller += 30
+            igjen.style.display = 'none'
+            rett.innerHTML = 'Correct guesses:' + nummer_rett
+            riktig = false
+        }
+        knapp.addEventListener('click', gjett)
+        igjen.addEventListener('click', igjen_f)
+
+        var tilfeldig_tall = Math.floor(Math.random() * 10000000)
+        console.log(tilfeldig_tall)
+
+        var teller = 180
+        function myTimer(){
+            if (riktig == true){
+                rett.innerHTML = 'Correct guesses: ' + nummer_rett
+
+            } else if(riktig == false){
+                
+                console.log('timer: '+ teller)
+            
+            teller--
+
+            timer.innerHTML = "Time: " + teller + " sec"
+            }
+
+
+            if (teller <= 0){
+                teller = 1
+                game_over.innerHTML = "Game over"
+                igjen.style.display = 'block'
+            }
+
+                
+        }
+       
+        setInterval(myTimer, 1000) // kjører funksjonen myTimer hvert sekund, (1000ms)
+
+        
+
+
+    </script>
+
+</body>
+</html>

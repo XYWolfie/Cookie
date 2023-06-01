@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    
+
+    <!--
+        cookie clicker / tycoon
+        -----------------------
+        click on dough
+        drag dough to oven
+        click on oven
+        drag to toppings
+        click on toppings
+        drag to customer
+        click on customer
+        get money
+
+        upgrades:
+        ---------
+        automated dough machine / emplyee
+        automated oven
+        automated toppings
+        automated click on customer / cashier
+        automated drags / conveyor belts
+        faster dough machine
+        faster oven
+        faster toppings
+        more money / tips
+        better cookies
+
+    -->
+
+    <p style ="background-image:
+    url('background/background.png');">
+
+    <div class="cookie_dough">
+    <img id="cookie_dough" src="cookie/cookie dough 1.png" alt="" height="40px" width="49px">
+    </div>
+
+    <div class="boxes">
+        <div class="box1">
+        <img id="box_1" src="items/box 1.png" alt="" height="170px" width="203px">
+        </div>
+
+        <div class="box3">
+            <img id="box_3" src="items/box 5.png" alt="" height="170px" width="176px">
+        </div>
+
+        <div class="box3">
+        <img id="box_3" src="items/box 3.png" alt="" height="170px" width="156px">
+        </div>
+
+        <div class="box3">
+            <img id="box_3" src="items/box 4.png" alt="" height="170px" width="176px">
+        </div>
+
+        <div class="box2">
+        <img id="box_2" src="items/box 2.png" alt="" height="170px" width="203px">
+        </div>
+    </div>
+
+<img id="money" src="money.png" height="50" width="60"> 
+
+    <div class="moneydiv">
+        <h2 id="EL_money">0</h2>
+    </div>
+
+    <div class="upgrades">
+        <div>
+            <img id="cookie_upgrade" src="cookie/finished cookie 1.png" height="70" width="70">
+        </div>
+        <div>
+            <img id="box1_upgrade" src="items/box 1.png" height="70" width="70">
+        </div>
+        <div>
+            <img id="box2_upgrade" src="items/box 3.png" height="70" width="70">
+        </div>
+        <div>
+            <img id="box3_upgrade" src="items/box 2.png" height="70" width="70">
+        </div>
+        <div>
+            <img id="conveyor_belt1" src="items/c_belt.png" height="20" width="70">
+        </div>
+        <div>
+            <img id="conveyor_belt2" src="items/c_belt.png" height="20" width="70">
+        </div>
+        <div>
+            <img id="employee1" src="FILL IN" height="70" width="70">
+        </div>
+        <div>
+            <img id="employee2" src="FILL IN" height="70" width="70">
+        </div>
+        <div>
+            <img id="employee3" src="FILL IN" height="70" width="70">
+        </div>
+    </div>
+
+
+    <script>
+        var timer_cookie
+
+        var cookie_at_start = true
+        var cookie_reached_press = false
+        var cookie_reached_oven = false
+        var cookie_reached_toppings
+        var cookie_reached_end = false
+
+        var done_press = false
+        var done_oven = false
+        var done_toppings = false
+        var done_end = false
+
+        var money = 0
+        var EL_money = document.querySelector('#EL_money')
+
+        imgObj_money = document.getElementById('money');
+        imgObj_money.style.position= 'fixed';
+        imgObj_money.style.left = '600px';
+        imgObj_money.style.top = '300px';
+
+        imgObj = document.getElementById('cookie_dough');
+        imgObj.style.position= 'relative';
+        imgObj.style.left = '345px';
+        imgObj.style.top = '900px';
+
+        
+
+
+
+        
+
+
+    imgObj.addEventListener('click', click_cookie)
+
+    function click_cookie() {
+        if (cookie_at_start == true){
+            cookie_at_start = false
+            timer = setTimeout(wait, 5000)
+            
+
+        } else if (cookie_reached_press == true){
+            console.log("cookie reached press")
+            timer2 = setTimeout(changeImg)
+            timer = setTimeout(wait2, 2000) // starts move_right3
+            console.log("cookie done press")
+            
+        
+        } else if (cookie_reached_oven == true){
+            console.log("cookie reached oven")
+            timer2 = setTimeout(changeImg5)
+            timer = setTimeout(wait4, 2000)
+            console.log("cookie done oven")
+            
+
+        } else if (cookie_reached_toppings == true){
+            
+            
+            timer2 = setTimeout(changeImg6)
+            timer = setTimeout(wait5, 2000)
+            console.log("cookie done toppings")
+
+        } else if (cookie_reached_end == true){
+            
+            done_end = true
+            timer2 = setTimeout(changeImg2)
+            timer = setTimeout(wait3, 2000)
+            
+            console.log("cookie done end")
+
+        } else if (done_end == true) {
+            
+            timer2 = setTimeout(changeImg3)
+            console.log("money")
+            pay = true
+
+        } else if (pay == true) {
+            timer2 = setTimeout(cookie_dough.remove())
+            more_money()
+        }
+        
+    
+    }
+
+    function moveRight(){  
+      
+ 
+        
+          
+	    imgObj.style.left = parseInt(imgObj.style.left) + 1 + 'px';
+        
+
+
+        if (parseInt(imgObj.style.left) >= 800){ // hvis nådde midten
+            clearInterval(timer_cookie)
+            cookie_at_start = false
+            cookie_reached_press = true
+            // imgObj.style.display = "None"
+            console.log("moved right") 
+        
+
+        }
+
+    }
+
+    function moveRight3(){  
+      
+ 
+        
+          
+      imgObj.style.left = parseInt(imgObj.style.left) + 1 + 'px';
+      
+      console.log(cookie_reached_press)
+      
+      if (parseInt(imgObj.style.left) >= 1230) {
+          // && cookie_reached_press == true
+        console.log("moved right3") 
+          clearInterval(timer_cookie)
+          done_press = true
+          cookie_reached_oven = true
+      }
+
+
+      }
+
+    function moveRight4(){  
+      
+ 
+        
+          
+      imgObj.style.left = parseInt(imgObj.style.left) + 1 + 'px';
+      
+
+      if (parseInt(imgObj.style.left) >= 2130 ) {
+        //&& done_press == true
+          clearInterval(timer_cookie)
+          done_oven = true
+          cookie_reached_toppings = true
+
+          console.log("moved right5") 
+      }
+
+
+      }
+      
+
+      function moveRight2(){  
+      
+ 
+        
+          
+      imgObj.style.left = parseInt(imgObj.style.left) + 1 + 'px';
+      
+      
+      if (parseInt(imgObj.style.left) >= 1670) {
+        //&& done_toppings == true
+          clearInterval(timer_cookie)
+          cookie_reached_toppings = true
+          done_oven = true
+          console.log("moved right4") 
+      }
+
+      
+
+      }
+
+  
+    
+
+    function changeImg(){
+        console.log("timer ferdig")
+        imgObj.src = "cookie/raw cookie 1.png"
+    }
+
+    function changeImg5(){
+        console.log("timer ferdig2")
+        imgObj.src = "cookie/baked cookie 1.png"
+    }
+
+    function changeImg6(){
+        console.log("timer ferdig3")
+        imgObj.src = "cookie/finished cookie 1.png"
+    }
+
+    function changeImg2(){
+        console.log("timer ferdig4")
+        imgObj.src = "cookie/cookie_box.png"
+    }
+
+    function changeImg3(){
+        console.log("timer ferdig5")
+        imgObj.src = "money.png"
+    }
+
+    function changeImg4(){
+        console.log("timer ferdig6")
+        imgObj.src = "cookie/cookie dough 1.png"
+    }
+
+    var delayInMilliseconds = 10000;
+
+
+    function wait(){     
+        timer_cookie = setInterval(moveRight, 3)
+        
+    }
+
+    function wait2(){     
+        cookie_reached_press = false
+        timer_cookie = setInterval(moveRight3, 3)
+
+        
+    }
+
+    function wait4(){   
+        cookie_reached_oven = false  
+        timer_cookie = setInterval(moveRight2, 3)
+        
+    }
+
+    function wait5(){     
+        timer_cookie = setInterval(moveRight4, 3)
+        
+    }
+
+    function wait3(){     
+        timer_cookie = setInterval(delayInMilliseconds)
+        
+    }
+
+    function more_money(){
+        money += 10
+        EL_money.innerHTML = money
+        console.log("+10 money")
+        new_cookie()
+        
+    }
+
+    function new_cookie(){
+        
+        pay = false
+        
+        imgObj.style.left = '300px'
+        timer2 = setTimeout(changeImg4)
+        cookie_at_start = true
+        imgObj.style.display = "block"
+        console.log("new cookie")
+        click_cookie()
+        
+        
+    }
+
+    </script>
+
+    
+</body> 
+</html>
