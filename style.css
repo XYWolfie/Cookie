@@ -10,17 +10,25 @@ url('background/background.png');
     background-size: 100% 100%;
 }
 
-.boxes {
+/* .boxes {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 10%;
-    column-gap: 13.6%;
+    margin: 13.5%;
+    column-gap: 12.6%;
     margin-top: 35%;
-}
-.moneydiv {
+} */
+
+/*.money div {
     position: fixed;
-    left: 670px;
+    left: 1000px;
     top: 290px;
    
-  }
+} */
+.upgrades {
+    display: flex;
+}
+.prices {
+    margin-bottom: 54px;
+    margin-left: 15px;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cookie tycoon</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -43,71 +43,216 @@
     <p style ="background-image:
     url('background/background.png');">
 
-    <div class="cookie_dough">
+    
+
+    <div class="boxes">
+        <div class="dough_machine_div">
+        <img id="dough_machine" src="dough machine 1, 1.png" alt="" height="270px" width="203px">
+        </div>
+
+        <div class="belt_1_div">
+            <img id="belt_1" src="belt 1, 1.png" alt="" height="150px" width="256px">
+        </div>
+
+        <div class="press_div">
+            <img id="press" src="press 1, 1.png" alt="" height="170px" width="176px">
+        </div>
+
+        <div class="oven_div">
+        <img id="oven" src="oven 1.png" alt="" height="180px" width="156px">
+        </div>
+
+        <div class="toppings_div">
+            <img id="toppings" src="toppings.png" alt="" height="170px" width="176px" class="droppable">>
+        </div>
+
+        <div class="boxing_div">
+        <img id="boxing" src="boxing.png" alt="" height="170px" width="203px">
+        </div>
+    </div>
+
+    <div class="cookie_dough_div">
     <img id="cookie_dough" src="cookie/cookie dough 1.png" alt="" height="40px" width="49px">
     </div>
 
-    <div class="boxes">
-        <div class="box1">
-        <img id="box_1" src="items/box 1.png" alt="" height="170px" width="203px">
-        </div>
 
-        <div class="box3">
-            <img id="box_3" src="items/box 5.png" alt="" height="170px" width="176px">
-        </div>
-
-        <div class="box3">
-        <img id="box_3" src="items/box 3.png" alt="" height="170px" width="156px">
-        </div>
-
-        <div class="box3">
-            <img id="box_3" src="items/box 4.png" alt="" height="170px" width="176px">
-        </div>
-
-        <div class="box2">
-        <img id="box_2" src="items/box 2.png" alt="" height="170px" width="203px">
-        </div>
-    </div>
-
-<img id="money" src="money.png" height="50" width="60"> 
-
-    <div class="moneydiv">
-        <h2 id="EL_money">0</h2>
-    </div>
 
     <div class="upgrades">
         <div>
-            <img id="cookie_upgrade" src="cookie/finished cookie 1.png" height="70" width="70">
+            <div>
+                <img id="cookie_upgrade" src="cookie/cookie dough 2.png" height="70" width="70">
+            </div>
+            <div>
+                <img id="cookie_box_upgrade" src="cookie box 2.png" height="70" width="70">
+            </div>
+            <div>
+                <img id="dough_machine_upgrade" src="dough machine 2, 1.png" height="70" width="70">
+            </div>
+            <div>
+                <img id="press_upgrade" src="press 1, 1.png" height="70" width="70">
+            </div>
+            <div>
+                <img id="oven_upgrade" src="oven 2.png" height="70" width="70">
+            </div>
+            <div>
+                <img id="toppings_upgrade" src="toppings 2.png" height="70" width="70">
+            </div>
+            <div>
+                <img id="boxing_upgrade" src="boxing 2.png" height="70" width="70">
+            </div>
+           
+
+            <div>
+                <img id="press_employee_upgrade" src="employee 1 upgrade.png" height="70" width="70">
+            </div>
+            <div>
+                <img id="oven_employee_upgrade" src="employee 1 upgrade.png" height="70" width="70">
+            </div>
+            <div>
+                <img id="toppings_employee_upgrade" src="employee 1 upgrade.png" height="70" width="70">
+            </div>
+            <div>
+                <img id="boxing_employee_upgrade" src="employee 1 upgrade.png" height="70" width="70">
+            </div>
         </div>
         <div>
-            <img id="box1_upgrade" src="items/box 1.png" height="70" width="70">
+            <h3 class="prices" id ="cookie_price">120$ & 25 sales</h3>
+            <h3 class="prices" id ="cookie_box_price">30$</h3>
+
+            <h3 class="prices" id ="dough_machine_price">70$</h3>
+            <h3 class="prices" id ="press_price">70$</h3>
+            <h3 class="prices" id ="oven_price">70$</h3>
+            <h3 class="prices" id ="toppings_price">70$</h3>
+            <h3 class="prices" id ="boxing_price">70$</h3>
+
+            <h3 class="prices" id ="press_employee_price">25$</h3>
+            <h3 class="prices" id ="oven__employee_price">25$</h3>
+            <h3 class="prices" id ="toppings_employee_price">25$</h3>
+            <h3 class="prices" id ="boxing_employee_price">25$</h3>
+        </div>
+    </div>
+
+    <div class = employees>
+
+        
+        <div>
+            <img id="press_employee" src="employee 1, 1.png" height="200" width="100">
         </div>
         <div>
-            <img id="box2_upgrade" src="items/box 3.png" height="70" width="70">
+            <img id="oven_employee" src="employee 1, 1.png" height="200" width="100">
         </div>
         <div>
-            <img id="box3_upgrade" src="items/box 2.png" height="70" width="70">
+            <img id="toppings_employee" src="employee 1, 1.png" height="200" width="100">
         </div>
         <div>
-            <img id="conveyor_belt1" src="items/c_belt.png" height="20" width="70">
+            <img id="boxing_employee" src="employee 1, 1.png" height="200" width="100">
         </div>
-        <div>
-            <img id="conveyor_belt2" src="items/c_belt.png" height="20" width="70">
+
+    </div>
+
+    <div class = "shelf_all div">
+
+        <div class = "shelf div">
+            <img id="shelf" src="shelf.png" height="50" width="800">
         </div>
-        <div>
-            <img id="employee1" src="FILL IN" height="70" width="70">
+        <div class = "money_jar div">
+            <img id="money_jar" src="empty money jar.png" height="88" width="70">
+            <div class = "money div">
+                <h2 id="EL_money">0</h2>
+            </div>
         </div>
-        <div>
-            <img id="employee2" src="FILL IN" height="70" width="70">
-        </div>
-        <div>
-            <img id="employee3" src="FILL IN" height="70" width="70">
-        </div>
+
+       
+
+       <img id="customers_sign" src="customers sign.png" height="200" width="158">
+       <h2 id="EL_cookies_sold">0</h2>
+
+        <h3 id="EL_cookies_in_box">0 / 6</h3>
+
+
+
+       <img id="ball" src="cookie/finished cookie 2.png" height = "70" width="70">
+
+       
+
     </div>
 
 
     <script>
+
+        var EL_cookie_upgrade = document.querySelector('#cookie_upgrade')
+
+
         var timer_cookie
+
+        var cookie = 1
+        var cookie_box = 1
+
+        var cookies_in_box = 0
+        var EL_cookies_in_box = document.getElementById('EL_cookies_in_box')
+        
+        
+        imgObj_EL_cookies_in_box = document.getElementById('EL_cookies_in_box');
+        imgObj_EL_cookies_in_box.style.position= 'fixed';
+        imgObj_EL_cookies_in_box.style.left = '2080px';
+        imgObj_EL_cookies_in_box.style.top = '850px';
+
+        // CONVEYOR BELTS
+
+        imgObj_belt_1 = document.getElementById('belt_1');
+        imgObj_belt_1.style.position= 'fixed';
+        imgObj_belt_1.style.left = '480px';
+        imgObj_belt_1.style.top = '900px';
+        imgObj_belt_1.style.display = 'none';
+       
+
+        //DECOR / ROOM
+       
+        var shelf = document.querySelector('#customers_sign')
+
+        imgObj_customers_sign = document.getElementById('customers_sign');
+        imgObj_customers_sign.style.position= 'fixed';
+        imgObj_customers_sign.style.left = '2220px';
+        imgObj_customers_sign.style.top = '530px';
+
+        var cookies_sold = 0
+        var EL_cookies_sold = document.querySelector('#EL_cookies_sold')
+
+        imgObj_EL_cookies_sold = document.getElementById('EL_cookies_sold');
+        imgObj_EL_cookies_sold.style.position= 'fixed';
+        imgObj_EL_cookies_sold.style.left = '2280px';
+        imgObj_EL_cookies_sold.style.top = '580px';
+
+        //SHELF
+
+        var shelf = document.querySelector('#shelf')
+
+        imgObj_shelf = document.getElementById('shelf');
+        imgObj_shelf.style.position= 'fixed';
+        imgObj_shelf.style.left = '880px';
+        imgObj_shelf.style.top = '650px';
+
+            // MONEY
+
+        var money = 0
+        var EL_money = document.querySelector('#EL_money')
+
+        imgObj_money = document.getElementById('money_jar');
+        imgObj_money.style.position= 'fixed';
+        imgObj_money.style.left = '1000px';
+        imgObj_money.style.top = '563px';
+
+        imgObj_EL_money = document.getElementById('EL_money');
+        imgObj_EL_money.style.position= 'fixed';
+        imgObj_EL_money.style.left = '1080px';
+        imgObj_EL_money.style.top = '580px';
+
+
+        
+
+        var pay = false
+
+        //LOCATIONS
 
         var cookie_at_start = true
         var cookie_reached_press = false
@@ -120,75 +265,204 @@
         var done_toppings = false
         var done_end = false
 
-        var money = 0
-        var EL_money = document.querySelector('#EL_money')
+        //MACHINES
 
-        imgObj_money = document.getElementById('money');
-        imgObj_money.style.position= 'fixed';
-        imgObj_money.style.left = '600px';
-        imgObj_money.style.top = '300px';
+        var dough_machine = 1
+        var press = 1
+        var oven = 1
+        var toppings = 1
+        var boxing = 1
 
-        imgObj = document.getElementById('cookie_dough');
-        imgObj.style.position= 'relative';
-        imgObj.style.left = '345px';
-        imgObj.style.top = '900px';
+        imgObj_dough_machine = document.getElementById('dough_machine');
+        imgObj_dough_machine.style.position= 'fixed';
+        imgObj_dough_machine.style.left = '342px';
+        imgObj_dough_machine.style.top = '850px';
+
+        imgObj_press = document.getElementById('press');
+        imgObj_press.style.position= 'fixed';
+        imgObj_press.style.left = '763px';
+        imgObj_press.style.top = '950px';
+
+        imgObj_oven = document.getElementById('oven');
+        imgObj_oven.style.position= 'fixed';
+        imgObj_oven.style.left = '1182px';
+        imgObj_oven.style.top = '950px';
+
+        imgObj_toppings = document.getElementById('toppings');
+        imgObj_toppings.style.position= 'fixed';
+        imgObj_toppings.style.left = '1601px';
+        imgObj_toppings.style.top = '950px';
+
+        imgObj_boxing = document.getElementById('boxing');
+        imgObj_boxing.style.position= 'fixed';
+        imgObj_boxing.style.left = '2020px';
+        imgObj_boxing.style.top = '950px';
+
+        //MACHINE UPGRADES 
+
+        var EL_dough_machine_upgrade = document.querySelector('#dough_machine_upgrade')
+        var EL_press_upgrade = document.querySelector('#press_upgrade')
+        var EL_oven_upgrade = document.querySelector('#oven_upgrade')
+        var EL_toppings_upgrade = document.querySelector('#toppings_upgrade')
+        var EL_boxing_upgrade = document.querySelector('#boxing_upgrade')
+
+        //EMPLOYEES
+
+        
+        var press_employee = 0
+        var oven_employee = 0
+        var toppings_employee = 0 
+        var boxing_employee = 0
+
+        // EMPLOYEE UPGRADES
+
+        
+        var EL_press_employee_upgrade = document.querySelector('#press_employee_upgrade')
+        var EL_oven_employee_upgrade = document.querySelector('#oven_employee_upgrade')
+        var EL_toppings_employee_upgrade = document.querySelector('#toppings_employee_upgrade')
+        var EL_boxing_employee_upgrade = document.querySelector('#boxing_employee_upgrade')
 
         
 
+        
+        //EMPLOYEES
+
+
+        
+
+
+        imgObj_press_employee = document.getElementById('press_employee');
+        imgObj_press_employee.style.position= 'fixed';
+        imgObj_press_employee.style.left = '660px';
+        imgObj_press_employee.style.top = '850px';
+        imgObj_press_employee.style.display = 'none';
+
+        imgObj_oven_employee = document.getElementById('oven_employee');
+        imgObj_oven_employee.style.position= 'fixed';
+        imgObj_oven_employee.style.left = '1085px';
+        imgObj_oven_employee.style.top = '850px';
+        imgObj_oven_employee.style.display = 'none';
+
+        imgObj_toppings_employee = document.getElementById('toppings_employee');
+        imgObj_toppings_employee.style.position= 'fixed';
+        imgObj_toppings_employee.style.left = '1495px';
+        imgObj_toppings_employee.style.top = '850px';
+        imgObj_toppings_employee.style.display = 'none';
+
+        imgObj_boxing_employee = document.getElementById('boxing_employee');
+        imgObj_boxing_employee.style.position= 'fixed';
+        imgObj_boxing_employee.style.left = '1910px';
+        imgObj_boxing_employee.style.top = '850px';
+        imgObj_boxing_employee.style.display = 'none';
+
+        
+       // COOKIE
+
+        imgObj = document.getElementById('cookie_dough'); 
+        imgObj.style.position= 'fixed';
+        imgObj.style.left = '425px';
+        imgObj.style.top = '920px';
 
 
         
 
 
     imgObj.addEventListener('click', click_cookie)
-
+    
     function click_cookie() {
+        
         if (cookie_at_start == true){
             cookie_at_start = false
+            if (dough_machine == 1){
+            timer2 = setTimeout(dough_machine_animation)
             timer = setTimeout(wait, 5000)
+            } else if (dough_machine == 2){
+            timer2 = setTimeout(dough_machine_animation2)
+            timer = setTimeout(wait, 2000)
+            } else if (dough_machine == 2){
+            timer2 = setTimeout(dough_machine_animation2)
+            timer = setTimeout(wait, 400)
+            }
+            
             
 
         } else if (cookie_reached_press == true){
-            console.log("cookie reached press")
-            timer2 = setTimeout(changeImg)
-            timer = setTimeout(wait2, 2000) // starts move_right3
-            console.log("cookie done press")
+                if (press == 1){
+                console.log("cookie reached press")
+                timer2 = setTimeout(press_animation)
+                timer2 = setTimeout(changeImg)
+                timer = setTimeout(wait2, 5000) // starts move_right3
+                console.log("cookie done press")
+                } else if (press == 2){
+                    timer2 = setTimeout(press_animation)
+                timer2 = setTimeout(changeImg)
+                timer = setTimeout(wait2, 2000)
+                } else if (press == 3){
+                timer2 = setTimeout(press_animation)
+                timer2 = setTimeout(changeImg)
+                timer = setTimeout(wait2, 400)
+                }
+
             
         
         } else if (cookie_reached_oven == true){
+            if (oven == 1){
             console.log("cookie reached oven")
+            imgObj.style.display = 'none'
             timer2 = setTimeout(changeImg5)
-            timer = setTimeout(wait4, 2000)
+            timer = setTimeout(wait4, 5000)
             console.log("cookie done oven")
+            } else if (oven == 2){
+            imgObj.style.display = 'none'
+            timer2 = setTimeout(changeImg5)
+            timer = setTimeout(wait4, 2000)    
+            } else if (oven == 3){
+            imgObj.style.display = 'none'
+            timer2 = setTimeout(changeImg5)
+            timer = setTimeout(wait4, 400)    
+            }
             
-
+            
         } else if (cookie_reached_toppings == true){
-            
-            
+            if (toppings == 1){
+            timer2 = setTimeout(changeImg6)
+            timer = setTimeout(wait5, 5000)
+            console.log("cookie done toppings")
+            } else if (topping == 2){
             timer2 = setTimeout(changeImg6)
             timer = setTimeout(wait5, 2000)
-            console.log("cookie done toppings")
+            } else if (topping == 3){
+            timer2 = setTimeout(changeImg6)
+            timer = setTimeout(wait5, 400)
+            }
 
         } else if (cookie_reached_end == true){
-            
-            done_end = true
+            if (boxing == 1){
+            timer2 = setTimeout(changeImg2)
+            timer = setTimeout(wait3, 5000)
+            console.log("cookie done end")
+            } else if (boxing == 2){
             timer2 = setTimeout(changeImg2)
             timer = setTimeout(wait3, 2000)
+            } else if (boxing == 3){
+            timer2 = setTimeout(changeImg2)
+            timer = setTimeout(wait3, 400)
+            }
             
-            console.log("cookie done end")
+            
 
         } else if (done_end == true) {
             
-            timer2 = setTimeout(changeImg3)
             console.log("money")
             pay = true
 
         } else if (pay == true) {
             timer2 = setTimeout(cookie_dough.remove())
-            more_money()
+            fill_cookie_box()
         }
         
     
+        
     }
 
     function moveRight(){  
@@ -200,7 +474,7 @@
         
 
 
-        if (parseInt(imgObj.style.left) >= 800){ // hvis nådde midten
+        if (parseInt(imgObj.style.left) >= 835){ // hvis nådde midten
             clearInterval(timer_cookie)
             cookie_at_start = false
             cookie_reached_press = true
@@ -240,11 +514,12 @@
       imgObj.style.left = parseInt(imgObj.style.left) + 1 + 'px';
       
 
-      if (parseInt(imgObj.style.left) >= 2130 ) {
+      if (parseInt(imgObj.style.left) >= 2080 ) {
         //&& done_press == true
           clearInterval(timer_cookie)
-          done_oven = true
-          cookie_reached_toppings = true
+          done_toppings = true
+          cookie_reached_toppings = false
+          cookie_reached_end = true
 
           console.log("moved right5") 
       }
@@ -277,34 +552,139 @@
     
 
     function changeImg(){
+        if (cookie == 1){
         console.log("timer ferdig")
         imgObj.src = "cookie/raw cookie 1.png"
+        imgObj.style.height = "27px"
+        imgObj.style.width = "55px"
+        imgObj.style.top = "935px"
+        } else if (cookie == 2){
+        imgObj.src = "cookie/raw cookie 2.png"
+        imgObj.style.height = "27px"
+        imgObj.style.width = "55px"
+        imgObj.style.top = "935px"
+        }
     }
 
     function changeImg5(){
+        if (cookie == 1){
         console.log("timer ferdig2")
         imgObj.src = "cookie/baked cookie 1.png"
+        imgObj.style.height = "30px"
+        } else if (cookie == 2){
+        imgObj.src = "cookie/baked cookie 2.png"
+        imgObj.style.height = "30px"
+        }
     }
 
     function changeImg6(){
+        if (cookie == 1){
         console.log("timer ferdig3")
         imgObj.src = "cookie/finished cookie 1.png"
+        } else if (cookie == 2){
+        imgObj.src = "cookie/finished cookie 2.png"
+        }
     }
 
     function changeImg2(){
+        if (cookie_box == 1){
         console.log("timer ferdig4")
-        imgObj.src = "cookie/cookie_box.png"
+        imgObj.src = "cookie box 1.png"
+        imgObj.style.height = '40px'
+        imgObj.style.width = '133px'
+        imgObj.style.left = '2060px'
+        } else if (cookie_box == 2){
+        imgObj.src = "cookie box 2.png"
+        imgObj.style.height = '40px'
+        imgObj.style.width = '133px'
+        imgObj.style.left = '2060px'
+        }
     }
 
     function changeImg3(){
         console.log("timer ferdig5")
         imgObj.src = "money.png"
+        
     }
 
     function changeImg4(){
+        if (cookie == 1){
         console.log("timer ferdig6")
         imgObj.src = "cookie/cookie dough 1.png"
+        } else if (cookie == 2){
+        imgObj.src = "cookie/cookie dough 2.png"
+        }
     }
+
+    // PRESS ANIMATION
+
+    function press_animation(){
+        cookie_dough.style.display = "none"
+        imgObj_press.src = 'press 1, 1.5.png'
+        timer = setTimeout (press_animation2, 1000)
+    }
+
+    function press_animation2(){
+        imgObj_press.src = 'press 1, 2.5.png'
+        timer = setTimeout (press_animation3, 1000)
+    }
+
+    function press_animation3(){
+        imgObj_press.src = 'press 1, 3.png'
+        timer = setTimeout (press_animation4, 1000)
+    }
+
+    function press_animation4(){
+        imgObj_press.src = 'press 1, 4.png'
+        timer = setTimeout (press_animation5, 1000)
+    }
+
+    function press_animation5(){
+        imgObj_press.src = 'press 1, 5.png'
+        timer = setTimeout (press_animation6, 1000)
+    }
+    function press_animation6(){
+        cookie_dough.style.display = "block"
+        imgObj_press.src = 'press 1, 1.png'
+    }
+
+    // DOUGH MACHINE ANIMATION
+
+    function dough_machine_animation(){
+        imgObj_dough_machine.src = 'dough machine 1, 1.png'
+        timer = setTimeout (dough_machine_animation2, 100)
+    }
+
+    function dough_machine_animation2(){
+        imgObj_dough_machine.src = 'dough machine 1, 2.png'
+        timer = setTimeout (dough_machine_animation3, 100)
+    }
+
+    function dough_machine_animation3(){
+        imgObj_dough_machine.src = 'dough machine 1, 3.png'
+        timer = setTimeout (dough_machine_animation, 100)
+    }
+ 
+    // DOUGH MACHINE ANIMATION 2
+
+    function dough_machine_animation(){
+        imgObj_dough_machine.src = 'dough machine 2, 1.png'
+        timer = setTimeout (dough_machine_animation2, 100)
+    }
+
+    function dough_machine_animation2(){
+        imgObj_dough_machine.src = 'dough machine 2, 2.png'
+        timer = setTimeout (dough_machine_animation3, 100)
+    }
+
+    function dough_machine_animation3(){
+        imgObj_dough_machine.src = 'dough machine 2, 3.png'
+        timer = setTimeout (dough_machine_animation, 100)
+    }
+
+    
+
+    //
 
     var delayInMilliseconds = 10000;
 
@@ -314,15 +694,16 @@
         
     }
 
-    function wait2(){     
+    function wait2(){    
         cookie_reached_press = false
         timer_cookie = setInterval(moveRight3, 3)
-
+        
         
     }
 
     function wait4(){   
-        cookie_reached_oven = false  
+        cookie_reached_oven = false 
+        imgObj.style.display = 'block' 
         timer_cookie = setInterval(moveRight2, 3)
         
     }
@@ -332,26 +713,67 @@
         
     }
 
-    function wait3(){     
-        timer_cookie = setInterval(delayInMilliseconds)
+    function wait3(){    
+        done_end = true
+
+        pay = true
+        fill_cookie_box()
         
+    }
+
+    function fill_cookie_box(){
+        cookies_in_box += 1
+        EL_cookies_in_box.innerHTML = cookies_in_box + " / 6"
+        done_end = false
+        if (cookies_in_box <= 5 ){
+            new_cookie()
+        } else if (cookies_in_box == 6){
+            cookies_in_box == 0
+            more_money()
+        }
     }
 
     function more_money(){
-        money += 10
+        if (pay == true && cookie == 1){
+        
+        money += 20
         EL_money.innerHTML = money
         console.log("+10 money")
+        cookies_sold += 1
         new_cookie()
+
+        }else if (pay == true && cookie == 2){
         
+        money += 40
+        EL_money.innerHTML = money
+        console.log("+20 money")
+        
+        cookies_sold += 1
+        
+        new_cookie()
+        }
     }
 
     function new_cookie(){
+
+
+        EL_cookies_sold.innerHTML = cookies_sold
         
+
+        cookie_reached_end = false
+        done_end = false
         pay = false
         
-        imgObj.style.left = '300px'
+        
+        imgObj.style.left = '450px'
+        imgObj.style.top = '930px'
+        imgObj.style.height = '40px'
+        imgObj.style.width = '49px'
         timer2 = setTimeout(changeImg4)
+
         cookie_at_start = true
+        
+
         imgObj.style.display = "block"
         console.log("new cookie")
         click_cookie()
@@ -359,6 +781,368 @@
         
     }
 
+    EL_cookie_upgrade.addEventListener('click', cookie_upgrade_function)
+    
+
+    function cookie_upgrade_function(){
+        if (cookie == 1 && money >= 120 && cookies_sold >= 10){
+            money -= 120
+            cookie += 1
+            
+        } else if (cookie == 2 && money >= 700 && cookies_sold >= 25){
+            money -= 700
+            cookie += 1
+        }
+
+    }
+
+    // DOUGH MACHINE UPGRADE FUNCTION
+
+    EL_dough_machine_upgrade.addEventListener('click', dough_machine_upgrade_function)
+
+    function dough_machine_upgrade_function(){
+        if (dough_machine == 1 && money >= 70){
+            money -= 70
+            dough_machine += 1
+            imgObj_dough_machine.src = "dough machine 2, 1.png"
+
+        }else if (dough_machine == 2 && money >= 140){
+            money -= 140
+            dough_machine += 1
+        }
+    }
+
+    // PRESS UPGRADE FUNCTION
+
+    EL_press_upgrade.addEventListener('click', press_upgrade_function)
+
+    function press_upgrade_function(){
+        if (press == 1 && money >= 70){
+            money -= 70
+            press += 1
+
+        }else if (press == 2 && money >= 140){
+            money -= 140
+            press += 1
+        }
+    }
+
+    // OVEN UPGRADE FUNCTION
+
+    EL_oven_upgrade.addEventListener('click', oven_upgrade_function)
+
+    function oven_upgrade_function(){
+        if (oven == 1 && money >= 70){
+            money -= 70
+            oven += 1
+            imgObj_oven.src = "oven 2.png"
+
+        }else if (oven == 2 && money >= 140){
+            money -= 140
+            oven += 1
+        }
+    }
+
+    // TOPPINGS UPGRADE FUNCTION
+
+    EL_toppings_upgrade.addEventListener('click', toppings_upgrade_function)
+
+    function toppings_upgrade_function(){
+        if (toppings == 1 && money >= 70){
+            money -= 70
+            toppings += 1
+            imgObj_toppings.src = "toppings 2.png"
+
+        }else if (toppings == 2 && money >= 140){
+            money -= 140
+            toppings += 1
+        }
+    }
+
+    // BOXING UPGRADE FUNCTION
+
+    EL_boxing_upgrade.addEventListener('click', boxing_upgrade_function)
+
+    function boxing_upgrade_function(){
+        if (boxing == 1 && money >= 70){
+            money -= 70
+            boxing += 1
+            imgObj_boxing.src = "boxing 2.png"
+
+        }else if (boxing == 2 && money >= 140){
+            money -= 140
+            boxing += 1
+        }
+}   
+    
+
+   
+
+    // PRESS EMPLOYEE UPGRADE FUNCTION
+
+    EL_press_employee_upgrade.addEventListener('click', press_employee_upgrade_function)
+
+
+    function press_automation(){
+
+        if (cookie_reached_press == true){
+
+            click_cookie()
+        }
+    }
+
+    function press_employee_upgrade_function(){
+        if (press_employee == 0 && money >= 25){
+            money -= 25
+            imgObj_press_employee.style.display = "block"
+            press_employee += 1
+            EL_press_employee_upgrade.src = 'employee 2, 1.png'
+            var press_employee_interval = setInterval(press_automation, 10000)
+            
+        } else if (press_employee == 1 && money >=50){
+            money -= 50
+            imgObj_press_employee.src = "employee 2, 1.png"
+            press_employee += 1
+            EL_press_employee_upgrade.src = 'employee 2, 1.png'
+            var press_employee_interval = setInterval(press_automation, 10000)
+
+            
+        } else if (press_employee == 2 && money >= 125){
+            money -= 125
+            imgObj_press_employee.src = "employee 2, 1.png"
+            press_employee += 1
+            var press_employee_interval = setInterval(press_automation, 10000)
+        }
+
+    }
+
+    // OVEN EMPLOYEE UPGRADE FUNCTION
+
+    EL_oven_employee_upgrade.addEventListener('click', oven_employee_upgrade_function)
+
+    function oven_automation(){
+
+        if (cookie_reached_oven == true){
+
+        click_cookie()
+        }
+    }
+
+    function oven_employee_upgrade_function(){
+        if (oven_employee == 0 && money >= 25){
+            money -= 25
+            imgObj_oven_employee.style.display = "block"
+            oven_employee += 1
+            EL_oven_employee_upgrade.src = 'employee 2, 1.png'
+            var oven_employee_interval = setInterval(oven_automation, 5000)
+            
+        } else if (oven_employee == 1 && money >=50){
+            money -= 50
+            imgObj_oven_employee.src = "employee 2, 1.png"
+            oven_employee += 1
+            EL_oven_employee_upgrade.src = 'employee 2, 1.png'
+            var oven_employee_interval = setInterval(oven_automation, 5000)
+            
+        } else if (oven_employee == 2 && money >= 125){
+            money -= 125
+            imgObj_oven_employee.src = "employee 2, 1.png"
+            oven_employee += 1
+            var oven_employee_interval = setInterval(oven_automation, 5000)
+        }
+
+    }
+
+    // TOPPINGS EMPLOYEE UPGRADE FUNCTION
+
+    EL_toppings_employee_upgrade.addEventListener('click', toppings_employee_upgrade_function)
+
+    function toppings_automation(){
+
+        if (cookie_reached_toppings == true){
+
+        click_cookie()
+        }
+    }
+
+    function toppings_employee_upgrade_function(){
+        if (toppings_employee == 0 && money >= 25){
+            money -= 25
+            imgObj_toppings_employee.style.display = "block"
+            toppings_employee += 1
+            EL_toppings_employee_upgrade.src = 'employee 2, 1.png'
+            var toppings_employee_interval = setInterval(toppings_automation, 5000)
+            
+        } else if (toppings_employee == 1 && money >=50){
+            money -= 50
+            imgObj_toppings_employee.src = "employee 2, 1.png"
+            toppings_employee += 1
+            EL_toppings_employee_upgrade.src = 'employee 2, 1.png'
+            var toppings_employee_interval = setInterval(toppings_automation, 5000)
+            
+        } else if (toppings_employee == 2 && money >= 125){
+            money -= 125
+            imgObj_toppings_employee.src = "employee 2, 1.png"
+            toppings_employee += 1
+            var toppings_employee_interval = setInterval(toppings_automation, 5000)
+        }
+
+    }
+
+    // BOXING EMPLOYEE UPGRADE FUNCTION
+
+    EL_boxing_employee_upgrade.addEventListener('click', boxing_employee_upgrade_function)
+
+    function boxing_automation(){
+
+        if (cookie_reached_end == true){
+
+        click_cookie()
+        }
+    }
+
+    function boxing_employee_upgrade_function(){
+        if (boxing_employee == 0 && money >= 25){
+            money -= 25
+            imgObj_boxing_employee.style.display = "block"
+            boxing_employee += 1
+            EL_boxing_employee_upgrade.src = 'employee 2, 1.png'
+            var boxing_employee_interval = setInterval(boxing_automation, 5000)
+            
+        } else if (boxing_employee == 1 && money >=50){
+            money -= 50
+            imgObj_boxing_employee.src = "employee 2, 1.png"
+            boxing_employee += 1
+            EL_boxing_employee_upgrade.src = 'employee 2, 1.png'
+            var boxing_employee_interval = setInterval(boxing_automation, 5000)
+            
+        } else if (boxing_employee == 2 && money >= 125){
+            money -= 125
+            imgObj_boxing_employee.src = "employee 2, 1.png"
+            boxing_employee += 1
+            var boxing_employee_interval = setInterval(boxing_automation, 5000)
+        }
+
+    }
+
+    cookie_box_upgrade.addEventListener('click', cookie_box_upgrade_function)
+
+    function cookie_box_upgrade_function(){
+        if (cookie_box == 1 && money >= 30) {
+            money -= 30
+            cookie_box += 1
+            cookie_box.src = "cookie box 1.png"
+        }
+    }
+
+    
+    setInterval(update_money, 1000) 
+    
+    
+    function update_money(){
+        if (money <= 9){
+        imgObj_money.src = "empty money jar.png"
+
+        } else if (money <= 25){
+            imgObj_money.src = "money jar 1.png"
+        } else if (money <= 50){
+            imgObj_money.src = "money jar 2.png"
+        } else if (money <= 99){
+            imgObj_money.src = "money jar 3.png"
+        } else if (money >= 100){
+            imgObj_money.src = "money jar 4.png"
+        } 
+
+        console.log("money update")
+
+    }
+    
+    
+    setInterval(update_box, 1000) 
+    
+    
+    function update_box(){
+        if (cookies_in_box == 6){
+            imgObj_boxing.src = "boxing.png"
+        }else if (cookies_in_box == 0){
+            imgObj_boxing.src = "boxing.png"
+        } else if (cookies_in_box <= 5){
+        imgObj_boxing.src = "boxing 1, 2.png"
+        }
+    }
+
+
+
+    let currentDroppable = null;
+
+    ball.onmousedown = function(event) {
+  
+
+  let shiftX = event.clientX - ball.getBoundingClientRect().left;
+  let shiftY = event.clientY - ball.getBoundingClientRect().top;
+
+  ball.style.position = 'absolute';
+  ball.style.zIndex = 1000;
+  document.body.append(ball);
+
+  moveAt(event.pageX, event.pageY);
+  
+  function moveAt(pageX, pageY) {
+    ball.style.left = pageX - shiftX + 'px';
+    ball.style.top = pageY - shiftY + 'px';
+  }
+
+ 
+  function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+
+        ball.hidden = true;
+        let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+        ball.hidden = false;
+
+        if (!elemBelow) return;
+
+        let droppableBelow = elemBelow.closest('.droppable');
+        if (currentDroppable != droppableBelow) {
+          if (currentDroppable) { // null when we were not over a droppable before this event
+            leaveDroppable(currentDroppable);
+          }
+          currentDroppable = droppableBelow;
+          if (currentDroppable) { // null if we're not coming over a droppable now
+            // (maybe just left the droppable)
+            enterDroppable(currentDroppable);
+          }
+        }
+      }
+
+ 
+  document.addEventListener('mousemove', onMouseMove);
+
+  
+  ball.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    ball.onmouseup = null;
+    
+    
+  };
+
+};
+
+function enterDroppable(elem) {
+      elem.style.background = 'none';
+    }
+
+    function leaveDroppable(elem) {
+      elem.style.background = '';
+    }
+
+    ball.ondragstart = function() {
+      return false;
+    };
+
+
+
+        
+    
     </script>
 
     
