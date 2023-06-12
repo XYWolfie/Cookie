@@ -171,7 +171,7 @@
 
 
 
-       <img id="ball" src="cookie/finished cookie 2.png" height = "70" width="70">
+       <img id="heart" src="heart.png" height = "60" width="70">
 
        
 
@@ -393,13 +393,13 @@
             cookie_at_start = false
             if (dough_machine == 1){
             timer2 = setTimeout(dough_machine_animation)
-            timer = setTimeout(wait, 5000)
+            timer = setTimeout(wait, 8000)
             } else if (dough_machine == 2){
-            timer2 = setTimeout(dough_machine_animation2)
-            timer = setTimeout(wait, 2000)
+            timer2 = setTimeout(dough_machine_animation1_2)
+            timer = setTimeout(wait, 4000)
             } else if (dough_machine == 2){
-            timer2 = setTimeout(dough_machine_animation2)
-            timer = setTimeout(wait, 400)
+            timer2 = setTimeout(dough_machine_animation1_2)
+            timer = setTimeout(wait, 1000)
             }
             
             
@@ -409,16 +409,16 @@
                 console.log("cookie reached press")
                 timer2 = setTimeout(press_animation)
                 timer2 = setTimeout(changeImg)
-                timer = setTimeout(wait2, 5000) // starts move_right3
+                timer = setTimeout(wait2, 8000) // starts move_right3
                 console.log("cookie done press")
                 } else if (press == 2){
                     timer2 = setTimeout(press_animation)
                 timer2 = setTimeout(changeImg)
-                timer = setTimeout(wait2, 2000)
+                timer = setTimeout(wait2, 4000)
                 } else if (press == 3){
                 timer2 = setTimeout(press_animation)
                 timer2 = setTimeout(changeImg)
-                timer = setTimeout(wait2, 400)
+                timer = setTimeout(wait2, 1000)
                 }
 
             
@@ -428,43 +428,43 @@
             console.log("cookie reached oven")
             imgObj.style.display = 'none'
             timer2 = setTimeout(changeImg5)
-            timer = setTimeout(wait4, 5000)
+            timer = setTimeout(wait4, 8000)
             console.log("cookie done oven")
             } else if (oven == 2){
             imgObj.style.display = 'none'
             timer2 = setTimeout(changeImg5)
-            timer = setTimeout(wait4, 2000)    
+            timer = setTimeout(wait4, 4000)    
             } else if (oven == 3){
             imgObj.style.display = 'none'
             timer2 = setTimeout(changeImg5)
-            timer = setTimeout(wait4, 400)    
+            timer = setTimeout(wait4, 1000)    
             }
             
             
         } else if (cookie_reached_toppings == true){
             if (toppings == 1){
             timer2 = setTimeout(changeImg6)
-            timer = setTimeout(wait5, 5000)
+            timer = setTimeout(wait5, 8000)
             console.log("cookie done toppings")
-            } else if (topping == 2){
+            } else if (toppings == 2){
             timer2 = setTimeout(changeImg6)
-            timer = setTimeout(wait5, 2000)
-            } else if (topping == 3){
+            timer = setTimeout(wait5, 4000)
+            } else if (toppings == 3){
             timer2 = setTimeout(changeImg6)
-            timer = setTimeout(wait5, 400)
+            timer = setTimeout(wait5, 1000)
             }
 
         } else if (cookie_reached_end == true){
             if (boxing == 1){
             timer2 = setTimeout(changeImg2)
-            timer = setTimeout(wait3, 5000)
+            timer = setTimeout(wait3, 8000)
             console.log("cookie done end")
             } else if (boxing == 2){
             timer2 = setTimeout(changeImg2)
-            timer = setTimeout(wait3, 2000)
+            timer = setTimeout(wait3, 4000)
             } else if (boxing == 3){
             timer2 = setTimeout(changeImg2)
-            timer = setTimeout(wait3, 400)
+            timer = setTimeout(wait3, 1000)
             }
             
             
@@ -685,19 +685,19 @@
  
     // DOUGH MACHINE ANIMATION 2
 
-    function dough_machine_animation(){
+    function dough_machine_animation1_2(){
         imgObj_dough_machine.src = 'dough machine 2, 1.png'
-        timer = setTimeout (dough_machine_animation2, 100)
+        timer = setTimeout (dough_machine_animation2_2, 100)
     }
 
-    function dough_machine_animation2(){
+    function dough_machine_animation2_2(){
         imgObj_dough_machine.src = 'dough machine 2, 2.png'
-        timer = setTimeout (dough_machine_animation3, 100)
+        timer = setTimeout (dough_machine_animation3_2, 100)
     }
 
-    function dough_machine_animation3(){
+    function dough_machine_animation3_2(){
         imgObj_dough_machine.src = 'dough machine 2, 3.png'
-        timer = setTimeout (dough_machine_animation, 100)
+        timer = setTimeout (dough_machine_animation1_2, 100)
     }
 
     
@@ -882,6 +882,8 @@
             money -= 70
             toppings += 1
             imgObj_toppings.src = "toppings 2.png"
+            toppings_price = "140$"
+            EL_toppings_price.innerHTML = toppings_price
 
         }else if (toppings == 2 && money >= 140){
             money -= 140
@@ -898,6 +900,8 @@
             money -= 70
             boxing += 1
             imgObj_boxing.src = "boxing 2.png"
+            boxing_price = "140$"
+            EL_boxing_price.innerHTML = boxing_price
 
         }else if (boxing == 2 && money >= 140){
             money -= 140
@@ -918,6 +922,7 @@
         if (cookie_reached_press == true){
 
             click_cookie()
+            imgObj_press_employee.src = "employee 1, 2.png"
         }
     }
 
@@ -926,14 +931,16 @@
             money -= 25
             imgObj_press_employee.style.display = "block"
             press_employee += 1
-            EL_press_employee_upgrade.src = 'employee 2, 1.png'
+            EL_press_employee_upgrade.src = 'employee 2 upgrade.png'
             var press_employee_interval = setInterval(press_automation, 10000)
+            press_employee_price = "50$"
+            EL_press_employee_price.innerHTML = press_employee_price
             
         } else if (press_employee == 1 && money >=50){
             money -= 50
             imgObj_press_employee.src = "employee 2, 1.png"
             press_employee += 1
-            EL_press_employee_upgrade.src = 'employee 2, 1.png'
+            EL_press_employee_upgrade.src = 'employee 2 upgrade.png'
             var press_employee_interval = setInterval(press_automation, 10000)
 
             
@@ -963,14 +970,14 @@
             money -= 25
             imgObj_oven_employee.style.display = "block"
             oven_employee += 1
-            EL_oven_employee_upgrade.src = 'employee 2, 1.png'
+            EL_oven_employee_upgrade.src = 'employee 2 upgrade.png'
             var oven_employee_interval = setInterval(oven_automation, 5000)
             
         } else if (oven_employee == 1 && money >=50){
             money -= 50
             imgObj_oven_employee.src = "employee 2, 1.png"
             oven_employee += 1
-            EL_oven_employee_upgrade.src = 'employee 2, 1.png'
+            EL_oven_employee_upgrade.src = 'employee 2 upgrade.png'
             var oven_employee_interval = setInterval(oven_automation, 5000)
             
         } else if (oven_employee == 2 && money >= 125){
@@ -991,6 +998,7 @@
         if (cookie_reached_toppings == true){
 
         click_cookie()
+        
         }
     }
 
@@ -999,14 +1007,14 @@
             money -= 25
             imgObj_toppings_employee.style.display = "block"
             toppings_employee += 1
-            EL_toppings_employee_upgrade.src = 'employee 2, 1.png'
+            EL_toppings_employee_upgrade.src = 'employee 2 upgrade.png'
             var toppings_employee_interval = setInterval(toppings_automation, 5000)
             
         } else if (toppings_employee == 1 && money >=50){
             money -= 50
             imgObj_toppings_employee.src = "employee 2, 1.png"
             toppings_employee += 1
-            EL_toppings_employee_upgrade.src = 'employee 2, 1.png'
+            EL_toppings_employee_upgrade.src = 'employee 2 upgrade.png'
             var toppings_employee_interval = setInterval(toppings_automation, 5000)
             
         } else if (toppings_employee == 2 && money >= 125){
@@ -1035,14 +1043,14 @@
             money -= 25
             imgObj_boxing_employee.style.display = "block"
             boxing_employee += 1
-            EL_boxing_employee_upgrade.src = 'employee 2, 1.png'
+            EL_boxing_employee_upgrade.src = 'employee 2 upgrade.png'
             var boxing_employee_interval = setInterval(boxing_automation, 5000)
             
         } else if (boxing_employee == 1 && money >=50){
             money -= 50
             imgObj_boxing_employee.src = "employee 2, 1.png"
             boxing_employee += 1
-            EL_boxing_employee_upgrade.src = 'employee 2, 1.png'
+            EL_boxing_employee_upgrade.src = 'employee 2 upgrade.png'
             var boxing_employee_interval = setInterval(boxing_automation, 5000)
             
         } else if (boxing_employee == 2 && money >= 125){
@@ -1069,6 +1077,7 @@
     
     
     function update_money(){
+        EL_money.innerHTML = money
         if (money <= 9){
         imgObj_money.src = "empty money jar.png"
 
@@ -1102,32 +1111,37 @@
 
 
 
+    if (cookies_sold == 100){
+        alert('Good job!');
+    }
+
+
     let currentDroppable = null;
 
-    ball.onmousedown = function(event) {
+    heart.onmousedown = function(event) {
   
 
-  let shiftX = event.clientX - ball.getBoundingClientRect().left;
-  let shiftY = event.clientY - ball.getBoundingClientRect().top;
+  let shiftX = event.clientX - heart.getBoundingClientRect().left;
+  let shiftY = event.clientY - heart.getBoundingClientRect().top;
 
-  ball.style.position = 'absolute';
-  ball.style.zIndex = 1000;
-  document.body.append(ball);
+  heart.style.position = 'absolute';
+  heart.style.zIndex = 1000;
+  document.body.append(heart);
 
   moveAt(event.pageX, event.pageY);
   
   function moveAt(pageX, pageY) {
-    ball.style.left = pageX - shiftX + 'px';
-    ball.style.top = pageY - shiftY + 'px';
+    heart.style.left = pageX - shiftX + 'px';
+    heart.style.top = pageY - shiftY + 'px';
   }
 
  
   function onMouseMove(event) {
         moveAt(event.pageX, event.pageY);
 
-        ball.hidden = true;
+        heart.hidden = true;
         let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
-        ball.hidden = false;
+        heart.hidden = false;
 
         if (!elemBelow) return;
 
@@ -1148,9 +1162,9 @@
   document.addEventListener('mousemove', onMouseMove);
 
   
-  ball.onmouseup = function() {
+  heart.onmouseup = function() {
     document.removeEventListener('mousemove', onMouseMove);
-    ball.onmouseup = null;
+    heart.onmouseup = null;
     
     
   };
@@ -1165,7 +1179,7 @@ function enterDroppable(elem) {
       elem.style.background = '';
     }
 
-    ball.ondragstart = function() {
+    heart.ondragstart = function() {
       return false;
     };
 
