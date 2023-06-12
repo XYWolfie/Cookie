@@ -116,19 +116,19 @@
             </div>
         </div>
         <div>
-            <h3 class="prices" id ="cookie_price">120$ & 25 sales</h3>
-            <h3 class="prices" id ="cookie_box_price">30$</h3>
+            <h3 class="prices" id ="EL_cookie_price">120$ & 10 sales</h3>
+            <h3 class="prices" id ="EL_cookie_box_price">30$</h3>
 
-            <h3 class="prices" id ="dough_machine_price">70$</h3>
-            <h3 class="prices" id ="press_price">70$</h3>
-            <h3 class="prices" id ="oven_price">70$</h3>
-            <h3 class="prices" id ="toppings_price">70$</h3>
-            <h3 class="prices" id ="boxing_price">70$</h3>
+            <h3 class="prices" id ="EL_dough_machine_price">70$</h3>
+            <h3 class="prices" id ="EL_press_price">70$</h3>
+            <h3 class="prices" id ="EL_oven_price">70$</h3>
+            <h3 class="prices" id ="EL_toppings_price">70$</h3>
+            <h3 class="prices" id ="EL_boxing_price">70$</h3>
 
-            <h3 class="prices" id ="press_employee_price">25$</h3>
-            <h3 class="prices" id ="oven__employee_price">25$</h3>
-            <h3 class="prices" id ="toppings_employee_price">25$</h3>
-            <h3 class="prices" id ="boxing_employee_price">25$</h3>
+            <h3 class="prices" id ="EL_press_employee_price">25$</h3>
+            <h3 class="prices" id ="EL_oven__employee_price">25$</h3>
+            <h3 class="prices" id ="EL_toppings_employee_price">25$</h3>
+            <h3 class="prices" id ="EL_boxing_employee_price">25$</h3>
         </div>
     </div>
 
@@ -181,6 +181,8 @@
     <script>
 
         var EL_cookie_upgrade = document.querySelector('#cookie_upgrade')
+
+        
 
 
         var timer_cookie
@@ -355,6 +357,20 @@
         imgObj_boxing_employee.style.top = '850px';
         imgObj_boxing_employee.style.display = 'none';
 
+        // PRICES
+
+        var EL_cookie_price = document.querySelector('#EL_cookie_price')
+        var EL_cookie_box_price = document.querySelector('#EL_cookie_box_price')
+        var EL_dough_machine_price = document.querySelector('#EL_dough_machine_price')
+        var EL_press_price = document.querySelector('#EL_press_price')
+        var EL_oven_price = document.querySelector('#EL_oven_price')
+        var EL_toppings_price = document.querySelector('#EL_toppings_price')
+        var EL_boxing_price = document.querySelector('#EL_boxing_price')
+        var EL_press_employee_price = document.querySelector('#EL_press_employee_price')
+        var EL_oven_employee_price = document.querySelector('#EL_oven_employee_price')
+        var EL_toppings_price = document.querySelector('#EL_toppings_price')
+        var EL_boxing_employee_price = document.querySelector('#EL_boxing_employee_price')
+
         
        // COOKIE
 
@@ -362,6 +378,8 @@
         imgObj.style.position= 'fixed';
         imgObj.style.left = '425px';
         imgObj.style.top = '920px';
+
+        
 
 
         
@@ -781,6 +799,8 @@
         
     }
 
+    // COOKIE UPGRADE FUNCTION
+
     EL_cookie_upgrade.addEventListener('click', cookie_upgrade_function)
     
 
@@ -788,10 +808,14 @@
         if (cookie == 1 && money >= 120 && cookies_sold >= 10){
             money -= 120
             cookie += 1
+            cookie_price = "700$ & 45 sales"
+            EL_cookie_price.innerHTML = cookie_price
+
             
-        } else if (cookie == 2 && money >= 700 && cookies_sold >= 25){
+        } else if (cookie == 2 && money >= 700 && cookies_sold >= 45){
             money -= 700
             cookie += 1
+
         }
 
     }
@@ -805,6 +829,8 @@
             money -= 70
             dough_machine += 1
             imgObj_dough_machine.src = "dough machine 2, 1.png"
+            dough_machine_price = "140$"
+            EL_dough_machine_price.innerHTML = dough_machine_price
 
         }else if (dough_machine == 2 && money >= 140){
             money -= 140
@@ -820,6 +846,8 @@
         if (press == 1 && money >= 70){
             money -= 70
             press += 1
+            press_price = "140$"
+            EL_press_price.innerHTML = press_price
 
         }else if (press == 2 && money >= 140){
             money -= 140
@@ -836,6 +864,8 @@
             money -= 70
             oven += 1
             imgObj_oven.src = "oven 2.png"
+            oven_price = "140$"
+            EL_oven_price.innerHTML = oven_price
 
         }else if (oven == 2 && money >= 140){
             money -= 140
